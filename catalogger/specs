@@ -1,0 +1,18 @@
+Catalogger is to use a Python script with Beautiful Soup 4 to scrape the OSU
+catalog and record a class's data in the database (probably using DB-API for
+python...)
+
+It should also maintain a list of classes which still need to be recorded in
+the database, such as any prereq not already recorded. 
+
+Catalogger will also be responsible for getting a professor's
+ratemyprofessors.com (RMP) info for each course. 
+
+
+I'll use MySQL because it's the path of least resistance -- OSU gives me a
+free oniddb which is nice because the hosting takes care of itself. DB-API
+docs obtained from [1]
+
+[1]
+http://www.cs.columbia.edu/~hgs/teaching/ap/examples/scripts_python_dbapi.pdf
+
