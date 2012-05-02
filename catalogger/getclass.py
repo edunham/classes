@@ -31,8 +31,22 @@ def get_page_from_web(course):
         return req.data
     return
 
-course = "CS 311"
-    
-page = BeautifulSoup(open(get_page_from_web(course)))
+def fill_course_infos(course, DEBUG = False):
+    """
+    Use BeautifulSoup to retrieve good content and format it usefully. This
+    will probably need to talk directly with the DB. Stuff about course: 
+        course_title = ''
+        description = ''
+        course_code = ''
+        terms_offered = []
+        taught_by = []
+        has_lab = False
+        has_recitation = False
+        prereqs = []
+        ecampus_terms = []
 
-print get_page_from_web(course) 
+    """
+    page = BeautifulSoup(open(get_page_from_web(course)))
+    # BeautifulSoup magic happens here
+    pass
+   
