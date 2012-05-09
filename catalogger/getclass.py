@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from bs4 import SoupStrainer
 import re
 import urllib3
 
@@ -33,7 +34,7 @@ def get_page_from_web(course):
 
 def fill_course_infos(course, DEBUG = False):
     """
-    Use BeautifulSoup to retrieve good content and format it usefully. This
+    Somehow parse relevant information out of the page we downloaded. This
     will probably need to talk directly with the DB. Stuff about course: 
         course_title = ''
         description = ''
@@ -46,7 +47,8 @@ def fill_course_infos(course, DEBUG = False):
         ecampus_terms = []
 
     """
-    page = BeautifulSoup(open(get_page_from_web(course)))
+    page = BeautifulSoup(open(get_page_from_web(course)), 'xml')
     # BeautifulSoup magic happens here
-    pass
+    print page.find_all(text = "more information").prettify()
    
+fill_course_infos("cs311")
