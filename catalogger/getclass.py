@@ -1,8 +1,6 @@
-from bs4 import BeautifulSoup
-from bs4 import SoupStrainer
 import re
 import urllib3
-
+from BeautifulSoup import BeautifulSoup
 def get_catalog_url(course):
     """
     Takes a string of a course number, like CS311, and turns it into the 
@@ -47,8 +45,7 @@ def fill_course_infos(course, DEBUG = False):
         ecampus_terms = []
 
     """
-    page = BeautifulSoup(open(get_page_from_web(course)), 'xml')
-    # BeautifulSoup magic happens here
-    print page.find_all(text = "more information").prettify()
-   
-fill_course_infos("cs311")
+soup=BeautifulSoup(urlopen("http://weather.yahoo.com/").read())
+for x in soup.find(attrs={"id":"myLocContainer"}).findAll("li"):
+  print x.a["title"], x.em.contents
+  
