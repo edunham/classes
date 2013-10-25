@@ -1,6 +1,22 @@
 Classify
 ========
 
+Purpose
+-------
+
+This tool is meant to help students with long-term planning -- two or 
+four-year plans. 
+
+If you already know what classes you plan to take and just want help 
+scheduling which section of each class to take this term, check out 
+[reggit][reggit] and [reglib][reglib].
+
+[reggit]:https://github.com/ngokevin/reggit
+[reglib]:https://github.com/thedjpetersen/reglib
+
+explanation
+-----------
+
 This half-finished little project started last year in an attempt to code
 myself out of job when I was working for the school of EECS as a peer adviser.
 
